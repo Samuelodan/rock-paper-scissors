@@ -43,28 +43,28 @@ function match (botMove, move){
         
         //win cases
     } else if (botMove === "rock" && move === "paper"){
-        alert("You win! Play again.")
+        alert("You win! Paper beats Rock! Play again.")
         startMatch();
 
     } else if (botMove === "scissors" && move === "rock"){
-        alert("You win! Play again.")
+        alert("You win! Rock beats Scissors! Play again.")
         startMatch();
 
     } else if (botMove === "paper" && move === "scissors"){
-        alert("You win! Play again")
+        alert("You win! Scissors beat Paper! Play again")
         startMatch();
         
         // lose cases
     } else if (botMove === "paper" && move === "rock"){
-        alert("You lost this round! Make another move")
+        alert("You lost this round! Paper beats Rock! Try again")
         startMatch();
 
     } else if (botMove === "rock" && move === "scissors"){
-        alert("You lost this round! Make another move")
+        alert("You lost this round! Rock beats Scissors! Try again")
         startMatch();
 
     } else if (botMove === "scissors" && move === "paper"){
-        alert("You lost this round! Make another move")
+        alert("You lost this round! Scissors beat Paper! Try again")
         startMatch();
     }
 }
@@ -72,10 +72,10 @@ function match (botMove, move){
 // match(botMove, move);
 
 
-// function startMatch  (){
-//     computerPlay();
-//     player();
-//     match(botMove, move);
-// }
+function startMatch  (){
+    computerPlay();
+    player();
+    match(botMove, move);
+}
 
-// startMatch();
+startMatch();
