@@ -12,7 +12,7 @@ function computerPlay (){
 };
 
 let move = "";
-function player (choice){
+function player(choice){
     // let choice = prompt("Make your move. 'rock', 'paper' or 'scissors'").toLowerCase();
     if (choice === "rock"){
         move = "rock";
@@ -24,7 +24,6 @@ function player (choice){
         alert("enter a valid choice!");
         return player();
     }*/
-
     return move;
 }
 
@@ -70,21 +69,29 @@ function startRound(){
         botScoreElement.textContent = `${botScore}`
         
     }
+    if (botScore === 5 || userScore === 5){
+        getWinner()
+    };
 }
 
 let botScore = 0;
 let userScore = 0;
 
-function startMatch(){
-        startRound();
+function getWinner(){
+        // startRound();
     let result = "";
+    
     if (botScore < userScore){
-        result = `Final Results \n\nYou win! You had: ${userScore} wins, Computer had: ${botScore} wins`;
+        result = `You Win!`;
     } else if (userScore < botScore){
-        result = `Final Results \n\nYou lost! You had: ${userScore} wins, Computer had: ${botScore} wins`;
+        result = `You Lose!`;
     } else {
-        result = `Final Results \n\nIt's a tie! You had: ${userScore} wins, Computer had: ${botScore} wins`;
+        result = `It's a Tie!`;
     }
+    resultElement.textContent = result;
+    const brElement = document.createElement("br");
+    resultElement.appendChild(brElement);
+    resultElement.appendChild(document.createTextNode("start a new game")); 
     // alert(result);
     // botScore = 0;
     // userScore = 0;
@@ -103,6 +110,8 @@ const roundWinnerElement = document.querySelector("#round-winner h2");
 const botScoreElement = document.getElementById("bot-score");
 const userScoreElement = document.getElementById("user-score");
 
+const resultElement = document.getElementById("result");
+
 //chooseMoves
 const rockButton = document.getElementById("rock-button");
 const paperButton = document.getElementById("paper-button");
@@ -110,17 +119,20 @@ const scissorsButton = document.getElementById("scissors-button");
 
 rockButton.addEventListener("click", () => {
     player("rock");
-    startMatch()
+    resultElement.textContent = "";
+    setTimeout(startRound, );
     
 });
 paperButton.addEventListener("click", () => {
     player("paper");
-    startMatch()
+    resultElement.textContent = "";
+    setTimeout(startRound, );
     
 });
 scissorsButton.addEventListener("click", () => {
     player("scissors");
-    startMatch()
+    resultElement.textContent = "";
+    setTimeout(startRound, );
     
 });
 

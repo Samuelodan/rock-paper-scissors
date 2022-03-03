@@ -73,8 +73,9 @@ body {
   width: 10rem;
   flex: 1 1 auto;
 }
-#results {
+#result {
   flex-grow: 3;
+  text-align: center;
 }
 .score {
   display: flex;
