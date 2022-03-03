@@ -20,18 +20,43 @@
       </div>
       <div id="second">
         <div id="show-bot-move" class="show-move">
-          <img class="hands rock" src="./img/fist.png" alt="" />
-          <img class="hands paper hidden" src="./img/hand.png" alt="" />
-          <img class="hands scissors hidden" src="./img/scissors.png" alt="" />
+          <img id="bot-rock" class="hands rock" src="./img/fist.png" alt="" />
+          <img
+            id="bot-paper"
+            class="hands paper hidden"
+            src="./img/hand.png"
+            alt=""
+          />
+          <img
+            id="bot-scissors"
+            class="hands scissors hidden"
+            src="./img/scissors.png"
+            alt=""
+          />
         </div>
         <div id="round-winner">
           <h3>paper beats rock</h3>
           <h2>You lost this round</h2>
         </div>
         <div id="show-user-move" class="show-move">
-          <img class="hands rock hidden" src="./img/fist.png" alt="" />
-          <img class="hands paper" src="./img/hand.png" alt="" />
-          <img class="hands scissors hidden" src="./img/scissors.png" alt="" />
+          <img
+            id="user-rock"
+            class="hands rock hidden"
+            src="./img/fist.png"
+            alt=""
+          />
+          <img
+            id="user-paper"
+            class="hands paper"
+            src="./img/hand.png"
+            alt=""
+          />
+          <img
+            id="user-scissors"
+            class="hands scissors hidden"
+            src="./img/scissors.png"
+            alt=""
+          />
         </div>
       </div>
       <div class="third">
@@ -53,13 +78,13 @@
           <button>Start New Game</button>
         </div>
         <div class="move-button-div">
-          <div class="move-buttons">
+          <div id="rock-button" class="move-buttons">
             <img src="./img/fist.png" alt="" />
           </div>
-          <div class="move-buttons">
+          <div id="paper-button" class="move-buttons">
             <img src="./img/hand.png" alt="" />
           </div>
-          <div class="move-buttons">
+          <div id="scissors-button" class="move-buttons">
             <img src="./img/scissors.png" alt="" />
           </div>
         </div>
