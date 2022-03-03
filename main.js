@@ -31,40 +31,64 @@ function startRound(){
     computerPlay();
     alert(`Computer: ${botMove}, You: ${move}`);
     if (botMove === move){
-        // roundHeaderElement.textContent = "It's a tie";
-        // roundWinnerElement.textContent = "Make Another Move"
-        alert("Tie!! Make another Move.");
+        roundHeaderElement.textContent = "";
+        roundWinnerElement.textContent = "It's a tie for this round!"
+        roundFooterElement.textContent = "Make another move"
+        // alert("Tie!! Make another Move.");
         
         //win cases
     } else if (botMove === "rock" && move === "paper"){
+        roundHeaderElement.textContent = "Paper beats Rock";
+        roundWinnerElement.textContent = "You won this round"
+        roundFooterElement.textContent = "Make another move"
 
-        alert("You win! Paper beats Rock! Play again.")
+        // alert("You win! Paper beats Rock! Play again.")
         userScore++;
         userScoreElement.textContent = `${userScore}`
 
     } else if (botMove === "scissors" && move === "rock"){
-        alert("You win! Rock beats Scissors! Play again.")
+        roundHeaderElement.textContent = "Rock beats Scissors";
+        roundWinnerElement.textContent = "You won this round"
+        roundFooterElement.textContent = "Make another move"
+
+        // alert("You win! Rock beats Scissors! Play again.")
         userScore++;
         userScoreElement.textContent = `${userScore}`
 
     } else if (botMove === "paper" && move === "scissors"){
-        alert("You win! Scissors beat Paper! Play again")
+        roundHeaderElement.textContent = "Scissors beat Paper";
+        textContent = "You won this round"
+        roundFooterElement.textContent = "Make another move"
+
+        // alert("You win! Scissors beat Paper! Play again")
         userScore++;
         userScoreElement.textContent = `${userScore}`
         
         // lose cases
     } else if (botMove === "paper" && move === "rock"){
-        alert("You lost this round! Paper beats Rock! Try again")
+        roundHeaderElement.textContent = "Paper beats Rock";
+        roundWinnerElement.textContent = "You lost this round"
+        roundFooterElement.textContent = "Make another move"
+
+        // alert("You lost this round! Paper beats Rock! Try again")
         botScore++;
         botScoreElement.textContent = `${botScore}`
 
     } else if (botMove === "rock" && move === "scissors"){
-        alert("You lost this round! Rock beats Scissors! Try again")
+        roundHeaderElement.textContent = "Rock beats Scissors";
+        roundWinnerElement.textContent = "You lost this round"
+        roundFooterElement.textContent = "Make another move"
+
+        // alert("You lost this round! Rock beats Scissors! Try again")
         botScore++;
         botScoreElement.textContent = `${botScore}`
 
     } else if (botMove === "scissors" && move === "paper"){
-        alert("You lost this round! Scissors beat Paper! Try again")
+        roundHeaderElement.textContent = "Scissors beat Paper";
+        roundWinnerElement.textContent = "You lost this round"
+        roundFooterElement.textContent = "Make another move"
+
+        // alert("You lost this round! Scissors beat Paper! Try again")
         botScore++;
         botScoreElement.textContent = `${botScore}`
         
@@ -106,6 +130,7 @@ const botPaperElement = document.getElementById("bot-paper");
 
 const roundHeaderElement = document.querySelector("#round-winner h3");
 const roundWinnerElement = document.querySelector("#round-winner h2");
+const roundFooterElement = document.querySelector("#round-winner :last-child");
 
 const botScoreElement = document.getElementById("bot-score");
 const userScoreElement = document.getElementById("user-score");
