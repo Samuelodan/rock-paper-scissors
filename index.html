@@ -6,9 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
-    Welcome!
+    <div class="base">
+      <div class="header">
+        <div id="bot" class="header-divs">
+          <h2>COMPUTER</h2>
+        </div>
+        <div id="user" class="header-divs">
+          <h2>YOU</h2>
+        </div>
+      </div>
+      <div id="second">
+        <div id="show-bot-move" class="show-move">
+          <img class="hands rock" src="./img/fist.png" alt="" />
+          <img class="hands paper hidden" src="./img/hand.png" alt="" />
+          <img class="hands scissors hidden" src="./img/scissors.png" alt="" />
+        </div>
+        <div id="round-winner">
+          <h3>paper beats rock</h3>
+          <h2>You lost this round</h2>
+        </div>
+        <div id="show-user-move" class="show-move">
+          <img class="hands rock hidden" src="./img/fist.png" alt="" />
+          <img class="hands paper" src="./img/hand.png" alt="" />
+          <img class="hands scissors hidden" src="./img/scissors.png" alt="" />
+        </div>
+      </div>
+      <div class="third">
+        <!-- <div id="result-header"></div> -->
+        <div class="score">
+          <h2>SCORE</h2>
+          <h1 id="bot-score">0</h1>
+        </div>
+        <div id="result-div">
+          <h1 id="result">You Win!!</h1>
+        </div>
+        <div class="score">
+          <h2>SCORE</h2>
+          <h1 id="user-score">0</h1>
+        </div>
+      </div>
+      <div class="fourth">
+        <div>
+          <button>Start New Game</button>
+        </div>
+        <div class="move-button-div">
+          <div class="move-buttons">
+            <img src="./img/fist.png" alt="" />
+          </div>
+          <div class="move-buttons">
+            <img src="./img/hand.png" alt="" />
+          </div>
+          <div class="move-buttons">
+            <img src="./img/scissors.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h4>Made by Sam.</h4>
+      </div>
+    </div>
   </body>
-  <script src="./main.js"></script>
 </html>
