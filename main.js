@@ -115,25 +115,25 @@ function startRound(){
 let botScore = 0;
 let userScore = 0;
 
-// function waitForStart(){
-//     document.querySelector(".move-button-div").classList.toggle("unsee");
-//     newGameButton.classList.toggle("unsee")
-// }
+function waitForStart(){
+    document.querySelector(".move-button-div").classList.toggle("unsee");
+    newGameButton.classList.toggle("unsee")
+}
 //waitForStart();
 
-// function startNewGame(){
-//     resultElement.textContent = "";
-//     roundHeaderElement.textContent = "";
-//     roundWinnerElement.textContent = ""
-//     roundFooterElement.textContent = ""
-//     botScore = 0;
-//     userScore = 0;
-//     botScoreElement.textContent = `${botScore}`
-//     userScoreElement.textContent = `${botScore}`
-//     document.querySelector(".move-button-div").classList.toggle("unsee");
-//     newGameButton.classList.toggle("unsee")
-//     hideIcons();
-// }
+function startNewGame(){
+    resultElement.textContent = "";
+    roundHeaderElement.textContent = "";
+    roundWinnerElement.textContent = ""
+    roundFooterElement.textContent = ""
+    botScore = 0;
+    userScore = 0;
+    botScoreElement.textContent = `${botScore}`
+    userScoreElement.textContent = `${botScore}`
+    document.querySelector(".move-button-div").classList.toggle("unsee");
+    newGameButton.classList.toggle("unsee")
+    hideIcons();
+}
 
 function getWinner(){
         // startRound();
@@ -151,7 +151,7 @@ function getWinner(){
     resultElement.appendChild(brElement);
     resultElement.appendChild(document.createTextNode("start a new game"));
 
-    // waitForStart()
+    waitForStart()
 
     setTimeout(() => {
 
