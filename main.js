@@ -176,7 +176,6 @@ const scissorsButton = document.getElementById("scissors-button");
 
 
 
-
 //EVENT LISTENERS
 
 rockButton.addEventListener("click", () => {
