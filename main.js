@@ -12,10 +12,7 @@ function computerPlay (){
         botMove = "scissors";
         botId = "bot-scissors";
     }
-
-    //showBotIcons(botId)
     showIcons(botId);
-    // return botMove;
 };
 
 let move = "";
@@ -32,23 +29,17 @@ function player(choice){
     } else if (choice === "scissors"){
         move = "scissors";
         id = "user-scissors"
-    }; /*else {
-        alert("enter a valid choice!");
-        return player();
-    }*/
-    // return move;
+    }; 
 
     showIcons(id);
 }
 
 function startRound(){
     computerPlay();
-    // alert(`Computer: ${botMove}, You: ${move}`);
     if (botMove === move){
         roundHeaderElement.textContent = "";
         roundWinnerElement.textContent = "It's a tie for this round!"
         roundFooterElement.textContent = "Make another move"
-        // alert("Tie!! Make another Move.");
         
         //win cases
     } else if (botMove === "rock" && move === "paper"){
@@ -56,7 +47,6 @@ function startRound(){
         roundWinnerElement.textContent = "You won this round"
         roundFooterElement.textContent = "Make another move"
 
-        // alert("You win! Paper beats Rock! Play again.")
         userScore++;
         userScoreElement.textContent = `${userScore}`
 
@@ -65,7 +55,6 @@ function startRound(){
         roundWinnerElement.textContent = "You won this round"
         roundFooterElement.textContent = "Make another move"
 
-        // alert("You win! Rock beats Scissors! Play again.")
         userScore++;
         userScoreElement.textContent = `${userScore}`
 
@@ -74,7 +63,6 @@ function startRound(){
         textContent = "You won this round"
         roundFooterElement.textContent = "Make another move"
 
-        // alert("You win! Scissors beat Paper! Play again")
         userScore++;
         userScoreElement.textContent = `${userScore}`
         
@@ -84,7 +72,6 @@ function startRound(){
         roundWinnerElement.textContent = "You lost this round"
         roundFooterElement.textContent = "Make another move"
 
-        // alert("You lost this round! Paper beats Rock! Try again")
         botScore++;
         botScoreElement.textContent = `${botScore}`
 
@@ -93,7 +80,6 @@ function startRound(){
         roundWinnerElement.textContent = "You lost this round"
         roundFooterElement.textContent = "Make another move"
 
-        // alert("You lost this round! Rock beats Scissors! Try again")
         botScore++;
         botScoreElement.textContent = `${botScore}`
 
@@ -102,7 +88,6 @@ function startRound(){
         roundWinnerElement.textContent = "You lost this round"
         roundFooterElement.textContent = "Make another move"
 
-        // alert("You lost this round! Scissors beat Paper! Try again")
         botScore++;
         botScoreElement.textContent = `${botScore}`
         
@@ -118,8 +103,9 @@ let userScore = 0;
 function waitForStart(){
     document.querySelector(".move-button-div").classList.toggle("unsee");
     newGameButton.classList.toggle("unsee")
+
+    roundFooterElement.textContent = ""
 }
-//waitForStart();
 
 function startNewGame(){
     resultElement.textContent = "";
@@ -136,7 +122,6 @@ function startNewGame(){
 }
 
 function getWinner(){
-        // startRound();
     let result = "";
     
     if (botScore < userScore){
@@ -152,10 +137,6 @@ function getWinner(){
     resultElement.appendChild(document.createTextNode("start a new game"));
 
     waitForStart()
-
-    setTimeout(() => {
-
-    }, 5000)
 }
 
 function hideIcons() {
@@ -167,16 +148,11 @@ function hideIcons() {
     }
 };
 
-//hideIcons();
-
 function showIcons(id) {
     document.getElementById(`${id}`).classList.remove("hidden");
 }
 
-
-
-//startMatch();
-
+//GET ELEMENTS SECTION
 //botMoveElements
 const botRockElement = document.getElementById("bot-rock");
 const botPaperElement = document.getElementById("bot-paper");
@@ -201,9 +177,7 @@ const scissorsButton = document.getElementById("scissors-button");
 
 
 
-
-
-
+//EVENT LISTENERS
 
 rockButton.addEventListener("click", () => {
     hideIcons()
@@ -229,4 +203,4 @@ scissorsButton.addEventListener("click", () => {
 });
 
 
-newGameButton.addEventListener("click", startNewGame)
+newGameButton.addEventListener("click", startNewGame);
