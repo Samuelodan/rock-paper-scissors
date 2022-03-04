@@ -151,3 +151,7 @@ class
 .hidden {
   display: none;
 }
+
+.unsee {
+  visibility: hidden;
+}

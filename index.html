@@ -20,7 +20,12 @@
       </div>
       <div id="second">
         <div id="show-bot-move" class="show-move">
-          <img id="bot-rock" class="hands rock" src="./img/fist.png" alt="" />
+          <img
+            id="bot-rock"
+            class="hands rock hidden"
+            src="./img/fist.png"
+            alt=""
+          />
           <img
             id="bot-paper"
             class="hands paper hidden"
@@ -35,9 +40,9 @@
           />
         </div>
         <div id="round-winner">
-          <h3>Paper beats Rock</h3>
-          <h2>You lost this round</h2>
-          <h3>Make another move</h3>
+          <h3></h3>
+          <h2></h2>
+          <h3></h3>
         </div>
         <div id="show-user-move" class="show-move">
           <img
@@ -48,7 +53,7 @@
           />
           <img
             id="user-paper"
-            class="hands paper"
+            class="hands paper hidden"
             src="./img/hand.png"
             alt=""
           />
@@ -67,7 +72,7 @@
           <h1 id="bot-score">0</h1>
         </div>
         <div id="result-div">
-          <h1 id="result"></h1>
+          <h1 id="result">make a move with the buttons below</h1>
         </div>
         <div class="score">
           <h2>SCORE</h2>
@@ -76,7 +81,7 @@
       </div>
       <div class="fourth">
         <div>
-          <button>Start New Game</button>
+          <button class="unsee">Start New Game</button>
         </div>
         <div class="move-button-div">
           <div id="rock-button" class="move-buttons">
